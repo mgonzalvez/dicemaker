@@ -1,0 +1,29 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency and tool caches
+node_modules/
+.cache/
+coverage/
+dist/
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+
+# User-generated DiceMaker exports and project files
+dicemaker-project.json
+dicemaker-print-and-play.pdf
+*-dice-template.png
+*-face-*.png
+
+# Source project retained locally for reference; DiceMaker has standalone copies of its runtime dependencies.
+TokenMaker/

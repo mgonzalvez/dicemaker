@@ -1,0 +1,16 @@
+/* DiceMaker deliberately inherits TokenMaker's visual system and reliable library controls. */
+@import url("tokenmaker-base.css");
+
+/* Map DiceMaker's D6-specific markup onto TokenMaker's established components. */
+.designer-grid { grid-template-columns: minmax(250px, .72fr) minmax(520px, 1.65fr) minmax(270px, .78fr); align-items: start; }
+.library.library-panel, .settings.inspector-panel { max-height: calc(100vh - 118px); max-height: calc(100dvh - 118px); position: sticky; top: 90px; overflow: auto; scrollbar-width: thin; }
+.library.library-panel { padding: 20px; }
+.editor.preview-panel { padding: 20px; }
+#categories { margin-bottom: 13px; padding-bottom: 3px; display: flex; gap: 6px; overflow-x: auto; overflow-y: hidden; flex-wrap: nowrap; scrollbar-width: none; }
+#categories::-webkit-scrollbar { display: none; }
+#categories button { flex: 0 0 auto; white-space: nowrap; }
+#icon-grid { max-height: min(50vh, 590px); padding: 2px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; }
+#icon-grid .icon-card { min-width: 0; aspect-ratio: 1; padding: 7px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+#icon-grid .icon-card img { width: 46px; max-width: 76%; height: 46px; max-height: 62%; object-fit: contain; }
+#icon-grid .icon-card span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 860px) { .designer-grid { display: flex; flex-direction: column; } .library.library-panel, .settings.inspector-panel { width: 100%; max-height: none; position: static; } }
