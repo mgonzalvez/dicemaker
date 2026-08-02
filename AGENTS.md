@@ -14,6 +14,7 @@ DiceMaker is a static, framework-free browser application. It has no package ins
 6. Keep user artwork serializable in saved project JSON. SVG uploads must be sanitized before insertion into the document.
 7. Keep the app static and client-side. Do not add a server, telemetry, accounts, or a build dependency without explicit approval.
 8. Keep the guided tutorial aligned with the actual UI and workflow. It is implemented in `app.js` with TokenMaker-style spotlight and callout classes supplied by `tokenmaker-base.css`.
+9. Theme changes must update both DiceMaker’s local appearance rules and TokenMaker’s `html[data-theme]` variables. Test new panels, menus, dialogs, previews, and exports in light and dark appearance.
 
 ## Key files
 
@@ -30,6 +31,10 @@ DiceMaker is a static, framework-free browser application. It has no package ins
 ## Tutorial maintenance
 
 The guided tutorial is intentionally a UI tour, not a static help dialog. Each step names a live selector and design/build workspace. If markup or workflow changes, verify every tutorial target still exists and update the title and copy in the `tutorialSteps` collection in `app.js`.
+
+## Appearance maintenance
+
+`setTheme()` in `app.js` is the single theme entry point. It synchronizes the saved DiceMaker preference, `body.dark` compatibility styling, and the `html[data-theme]` value required by `tokenmaker-base.css`. Put DiceMaker-only dark-surface adjustments in `tokenmaker-overrides.css`; do not add isolated dark-mode behavior that bypasses this path.
 
 ## Checks
 

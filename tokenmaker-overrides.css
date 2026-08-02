@@ -14,3 +14,10 @@
 #icon-grid .icon-card img { width: 46px; max-width: 76%; height: 46px; max-height: 62%; object-fit: contain; }
 #icon-grid .icon-card span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 @media (max-width: 860px) { .designer-grid { display: flex; flex-direction: column; } .library.library-panel, .settings.inspector-panel { width: 100%; max-height: none; position: static; } }
+
+/* DiceMaker-only surfaces that are not part of TokenMaker's original component set. */
+html[data-theme="dark"] .die-preview { background: linear-gradient(135deg, #1d2b42, #111b2b); }
+html[data-theme="dark"] .sheet-preview-wrap { background: #0b111b; border: 1px solid var(--border); }
+html[data-theme="dark"] .dice-card { background: var(--control-bg); border-color: var(--border); }
+html[data-theme="dark"] #toast { background: var(--surface-solid); color: var(--text); border: 1px solid var(--border-strong); }
+html[data-theme="dark"] footer { border-color: var(--border); }

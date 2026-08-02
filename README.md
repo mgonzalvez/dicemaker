@@ -53,6 +53,10 @@ Then open <http://localhost:8766/>.
 
 Use the **Tutorial** button in the header at any time for a step-by-step tour of this workflow.
 
+## Appearance
+
+DiceMaker supports light and dark appearance. It follows the saved preference when available and otherwise uses the operating system preference. The theme control in the header updates the TokenMaker-compatible `data-theme` state, so shared controls, menus, dialogs, tutorial overlays, and DiceMaker-specific previews stay visually consistent.
+
 ## Validation
 
 Run the basic source check before committing:
